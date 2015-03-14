@@ -130,7 +130,7 @@ docker run -i -t -d --name neo4j-one -p 7575:7474 tpires/neo4j
 docker run -i -t -d --name neo4j-two -p 7676:7474 tpires/neo4j
 ```
 
-Will spin up two instances of Neo4j, one called `neo4j-one` running on port `7575`, and one called `neo4j-two` running on port `7676`. This can multiple functional tests to be run in parallel. 
+Will spin up two instances of Neo4j, one called `neo4j-one` running on port `7575`, and one called `neo4j-two` running on port `7676`. This allows multiple functional tests to be run in parallel. 
 
 Cleaning these instances up is just a question of stopping and deleting them:
 
