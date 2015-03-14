@@ -123,7 +123,7 @@ The next time we use our `docker run` command a fresh, empty instance of Neo4j w
 
 ## Advanced Use
 
-The `-p 7474:7474` part of our command tells Docker to map port `7474` from the Docker image to port `7474` on the host operating system. We can change this to map to any port on the host operating system that we like. This allows us to run test instances of Neo4j side by side, or alongside a native instance. Running:
+The `-p 7474:7474` part of our command tells Docker to map port `7474` from the Docker image to port `7474` on the host operating system. We can change this to map to any port on the host operating system that we like. This allows us to run test instances of Neo4j side by side, or alongside a native instance.
 
 ```bash
 docker run -i -t -d --name neo4j-one -p 7575:7474 tpires/neo4j
