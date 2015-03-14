@@ -108,7 +108,7 @@ docker run -i -t -d --name neo4j -p 7474:7474 tpires/neo4j
 
 This command is telling Docker to run the image `tpires/neo4j` on port `7474` and call the resulting Docker instance `neo4j`. The image will be downloaded from [Docker Hub][hub] and contains just what's needed to get Neo4j up and running.
 
-We can now run our tests against the instnace of Neo4j running in Docker.
+We can now run our tests against the instance of Neo4j running in Docker.
 
 > **Note:** Due to the way Docker runs on OSX you may need to use the IP address of the VirtualBox host that Docker is using rather than using localhost in your connection URL. If you run `export NEO4J_TEST_URL=http://$(boot2docker ip):7474` this will run the above test on the correct URL.
 
