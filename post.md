@@ -108,7 +108,7 @@ docker run -i -t -d --name neo4j -p 7474:7474 tpires/neo4j
 
 This command is telling Docker to run the image `tpires/neo4j` on port `7474` and call the resulting Docker instance `neo4j`. The image will be downloaded from [Docker Hub][hub] and contains just what's needed to get Neo4j up and running.
 
-We can now run our tests against the instnace of Neo4j running in Docker.
+We can now run our tests against the instance of Neo4j running in Docker.
 
 > **Note:** Due to the way Docker runs on OSX you may need to use the IP address of the VirtualBox host that Docker is using rather than using localhost in your connection URL. If you run `export NEO4J_TEST_URL=http://$(boot2docker ip):7474` this will run the above test on the correct URL.
 
@@ -123,14 +123,14 @@ The next time we use our `docker run` command a fresh, empty instance of Neo4j w
 
 ## Advanced Use
 
-The `-p 7474:7474` part of our command tells Docker to map port `7474` from the Docker image to port `7474` on the host operating system. We can change this to map to any port on the host operating system that we like. This allows us to run test instances of Neo4j side by side, or alongside a native instance. Running:
+The `-p 7474:7474` part of our command tells Docker to map port `7474` from the Docker image to port `7474` on the host operating system. We can change this to map to any port on the host operating system that we like. This allows us to run test instances of Neo4j side by side, or alongside a native instance.
 
 ```bash
 docker run -i -t -d --name neo4j-one -p 7575:7474 tpires/neo4j
 docker run -i -t -d --name neo4j-two -p 7676:7474 tpires/neo4j
 ```
 
-Will spin up two instances of Neo4j, one called `neo4j-one` running on port `7575`, and one called `neo4j-two` running on port `7676`. This can multiple functional tests to be run in parallel. 
+Will spin up two instances of Neo4j, one called `neo4j-one` running on port `7575`, and one called `neo4j-two` running on port `7676`. This allows multiple functional tests to be run in parallel. 
 
 Cleaning these instances up is just a question of stopping and deleting them:
 
